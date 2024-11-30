@@ -1,57 +1,51 @@
 ### Fluxo de Trabalho aaaaaaaaa
 
-## Descrição:
+## 👥 Integrantes
 
-Adotaremos um modelo de branch por pessoa. Cada desenvolvedor terá seu próprio branch de trabalho. A nomenclatura do branch será dev-<nome-do-desenvolvedor>. Após concluir suas tarefas, o desenvolvedor abrirá um Pull Request (PR) para a branch main, onde o código será revisado antes de ser mergeado.
+- Rodrigo Andrade Cavalcante Muniz - 01606059
+- Eliel Lucas Trajano Neto - 01606048
+- José Gabriel Rocha Barreto - 01597807
+- Matheus Henrique da Costa Nascimento - 01601141
+- Pedro Antônio Silva Pedroso - 01605602
+- Rafael Aragão Vieira - 01592062
+- André Marcilio da Silva Ferreira - 01616701
 
-## Fluxograma:
+## 🛠️ Requisitos
 
-O fluxo segue os seguintes passos:
+Antes de começar, garanta que você tenha as ferramentas instaladas:
 
-- Cada desenvolvedor cria seu branch a partir de main.
-- O trabalho é realizado no branch pessoal com commits regulares.
-- Após finalizar, o branch é enviado para o repositório remoto.
-- O desenvolvedor abre um PR para a branch main.
-- O código é revisado e mergeado na main.
+[ver requisitos](./librarydocs/infos.pdf)
 
-1. Crie um branch pessoal com o comando `git checkout -b dev-<nome-do-desenvolvedor>`.
-2. Desenvolva no branch criado, fazendo commits regulares.
-3. Após concluir o trabalho, faça um push para o repositório remoto.
-4. Abra um Pull Request (PR) para a branch `main`.
-5. O PR será revisado antes de ser mergeado na `main`.
+- **Node.js**: Para rodar o projeto.
+- **Git**: Para controle de versão.
+- **Prisma CLI**: Para gerenciar o banco de dados.
 
-Referência: Consulte o fluxograma no arquivo `CONTRIBUTING.md`.
+### Fluxo de Trabalho
 
-### Tutorial para Fluxo de Trabalho no Git
+O projeto segue o modelo de **branch por desenvolvedor**:
 
-# Clonar o repositório
+[ver fluxo](./librarydocs/infos.pdf)
 
-git clone <url-do-repositorio>
+1. Crie uma branch para o seu desenvolvimento:
 
-# Criar um novo branch pessoal
+   ```bash
+   git checkout -b nome-da-sua-branch
+   ```
 
-git checkout -b dev-<nome-do-desenvolvedor>
+2. Após finalizar as alterações, faça um commit:
 
-# Adicionar mudanças
+   ```bash
+   git add .
+   git commit -m "Descrição das alterações"
+   ```
 
-git add .
+3. Envie as alterações para o repositório remoto:
+   ```bash
+   git push origin nome-da-sua-branch
+   ```
 
-# Criar um commit
+### Tutorial Git
 
-git commit -m "Descrição da mudança"
+Para contribuir com o projeto, siga o Tutorial de Fluxo de Trabalho Git.
 
-# Enviar para o repositório remoto
-
-git push origin dev-<nome-do-desenvolvedor>
-
-# Após finalizar o trabalho, abrir Pull Request no GitHub (GUI)
-
-# Fazer merge do PR no GitHub
-
-# Voltar para a branch main após o merge
-
-git checkout main
-
-# Atualizar a branch main localmente
-
-git pull origin main
+[ver tutorial](./librarydocs/infos.pdf)

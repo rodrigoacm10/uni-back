@@ -1,18 +1,72 @@
+# Library Management System
+
+## 📚 Descrição
+
+Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **Node.js**, **Express** e **Prisma ORM**, utilizando um banco de dados SQLite. Ele permite gerenciar usuários, livros e empréstimos, oferecendo funcionalidades como registrar empréstimos e identificar os livros mais emprestados.
+
+---
+
+### 👥 Integrantes
+
+- Rodrigo Andrade Cavalcante Muniz - 01606059
+- Eliel Lucas Trajano Neto - 01606048
+- José Gabriel Rocha Barreto - 01597807
+- Matheus Henrique da Costa Nascimento - 01601141
+- Pedro Antônio Silva Pedroso - 01605602
+- Rafael Aragão Vieira - 01592062
+- André Marcilio da Silva Ferreira - 01616701
+
+## 🚀 Funcionalidades
+
+- Cadastro de usuários.
+- Cadastro de livros.
+- Registro e gerenciamento de empréstimos.
+- Listagem dos livros mais emprestados, incluindo a quantidade de empréstimos.
+
+---
+
+## 🛠️ Ferramentas e Tecnologias
+
+- **Node.js**: Ambiente de execução JavaScript.
+- **Express.js**: Framework para construção de APIs.
+- **Prisma ORM**: Gerenciamento e interação com o banco de dados.
+- **SQLite**: Banco de dados leve e embutido.
+- **Git**: Controle de versão do projeto.
+
+### 📦 Instalação e Configuração
+
+[ver requisitos](./librarydocs/infos.pdf)
+
+1. Clone o repositório:
+
+   ```bash
+   git clone <URL_DO_REPOSITÓRIO>
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Configure o banco de dados:
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+4. Inicie o servidor:
+   ```bash
+   npm run dev
+   ```
+
+## 🗂️ Estrutura do Fluxo de Trabalho
+
+O fluxo de trabalho utiliza um modelo de branch por desenvolvedor. Cada desenvolvedor deve criar uma branch com seu nome ou recurso específico em que está trabalhando. Após finalizar o desenvolvimento, o merge deve ser feito na branch main.
+
+[ver estrutura](./librarydocs/infos.pdf)
+
 ### Fluxo de Trabalho
-
-## Descrição:
-
-Adotaremos um modelo de branch por pessoa. Cada desenvolvedor terá seu próprio branch de trabalho. A nomenclatura do branch será dev-<nome-do-desenvolvedor>. Após concluir suas tarefas, o desenvolvedor abrirá um Pull Request (PR) para a branch main, onde o código será revisado antes de ser mergeado.
-
-## Fluxograma:
-
-O fluxo segue os seguintes passos:
-
-- Cada desenvolvedor cria seu branch a partir de main.
-- O trabalho é realizado no branch pessoal com commits regulares.
-- Após finalizar, o branch é enviado para o repositório remoto.
-- O desenvolvedor abre um PR para a branch main.
-- O código é revisado e mergeado na main.
 
 1. Crie um branch pessoal com o comando `git checkout -b dev-<nome-do-desenvolvedor>`.
 2. Desenvolva no branch criado, fazendo commits regulares.
@@ -20,38 +74,22 @@ O fluxo segue os seguintes passos:
 4. Abra um Pull Request (PR) para a branch `main`.
 5. O PR será revisado antes de ser mergeado na `main`.
 
-Referência: Consulte o fluxograma no arquivo `CONTRIBUTING.md`.
+### Fluxograma do Fluxo de Trabalho
 
-### Tutorial para Fluxo de Trabalho no Git
+O fluxograma abaixo explica como o fluxo de trabalho deve ser seguido:
 
-# Clonar o repositório
+[ver fluxo](./librarydocs/infos.pdf)
 
-git clone <url-do-repositorio>
+### Tutorial Git
 
-# Criar um novo branch pessoal
+Para contribuir com o projeto, siga o Tutorial de Fluxo de Trabalho Git.
 
-git checkout -b dev-<nome-do-desenvolvedor>
+[ver tutorial](./librarydocs/infos.pdf)
 
-# Adicionar mudanças
-
-git add .
-
-# Criar um commit
-
-git commit -m "Descrição da mudança"
-
-# Enviar para o repositório remoto
-
-git push origin dev-<nome-do-desenvolvedor>
-
-# Após finalizar o trabalho, abrir Pull Request no GitHub (GUI)
-
-# Fazer merge do PR no GitHub
-
-# Voltar para a branch main após o merge
-
-git checkout main
-
-# Atualizar a branch main localmente
-
-git pull origin main
+graph TD
+A[main] -->|Criar Branch| B[dev-<nome-do-desenvolvedor>]
+B --> C[Desenvolvimento]
+C -->|Commit/Push| B
+B -->|Abrir Pull Request| D[PR para main]
+D -->|Revisar| E[Merge para main]
+E --> A
