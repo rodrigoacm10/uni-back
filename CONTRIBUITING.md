@@ -19,6 +19,7 @@ Antes de começar, garanta que você tenha as ferramentas instaladas:
 - **Node.js**: Para rodar o projeto.
 - **Git**: Para controle de versão.
 - **Prisma CLI**: Para gerenciar o banco de dados.
+- **PostgreSQL**: Banco de dados relacional robusto.
 
 ### Fluxo de Trabalho
 

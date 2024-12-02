@@ -2,7 +2,7 @@
 
 ## 📚 Descrição
 
-Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **Node.js**, **Express** e **Prisma ORM**, utilizando um banco de dados SQLite. Ele permite gerenciar usuários, livros e empréstimos, oferecendo funcionalidades como registrar empréstimos e identificar os livros mais emprestados.
+Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **Node.js**, **Express** e **Prisma ORM**, utilizando um banco de dados **PostgreSQL**. Ele permite gerenciar usuários, livros e empréstimos, oferecendo funcionalidades como registrar empréstimos e identificar os livros mais emprestados.
 
 ---
 
@@ -30,10 +30,15 @@ Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **No
 - **Node.js**: Ambiente de execução JavaScript.
 - **Express.js**: Framework para construção de APIs.
 - **Prisma ORM**: Gerenciamento e interação com o banco de dados.
-- **SQLite**: Banco de dados leve e embutido.
+- **PostgreSQL**: Banco de dados relacional robusto.
 - **Git**: Controle de versão do projeto.
 
 ### 📦 Instalação e Configuração
+
+#### Requisitos
+
+Node.js instalado.
+PostgreSQL instalado e configurado.
 
 [ver requisitos](./librarydocs/infos.pdf)
 
@@ -51,11 +56,31 @@ Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **No
 
 3. Configure o banco de dados:
 
+Crie um banco de dados PostgreSQL:
+
+```bash
+CREATE DATABASE librarydocs;
+```
+
+Atualize o arquivo .env:
+
+```bash
+env
+
+DATABASE_URL="postgresql://<usuario>:<senha>@localhost:5432/librarydocs"
+```
+
+```bash
+npx prisma generate
+```
+
+4. Aplique as migrações:
+
    ```bash
    npx prisma migrate dev
    ```
 
-4. Inicie o servidor:
+5. Inicie o servidor:
    ```bash
    npm run dev
    ```
