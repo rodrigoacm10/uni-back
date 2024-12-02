@@ -1,5 +1,9 @@
 # Library Management System
 
+## 📚 Protótipo
+
+[ver protótipo](https://www.figma.com/design/5pGMJqKk3uMG8HuPG1sKG6/Untitled?node-id=0-1&t=HTXwippak0OKTZ5n-1)
+
 ## 📚 Descrição
 
 Este projeto é um sistema de gerenciamento de biblioteca, desenvolvido com **Node.js**, **Express** e **Prisma ORM**, utilizando um banco de dados **PostgreSQL**. Ele permite gerenciar usuários, livros e empréstimos, oferecendo funcionalidades como registrar empréstimos e identificar os livros mais emprestados.
